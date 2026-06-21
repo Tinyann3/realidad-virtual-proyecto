@@ -1,345 +1,114 @@
-/* ==========================================
-   ESTILOS GENERALES
-   ========================================== */
+/* ===== FUENTE ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-    line-height: 1.8;
-    color: #2c3e50;
-    background-color: #f8f9fa;
+    font-family: 'Inter', sans-serif;
+    background: #D9FCDE;        /* Frozen Water */
+    color: #3B3664;              /* Twilight Indigo */
+    max-width: 850px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    line-height: 1.7;
 }
 
-/* ==========================================
-   NAVEGACIÓN (MIGAS DE PAN)
-   ========================================== */
-nav {
-    font-size: 14px;
-    color: #7f8c8d;
-    margin-bottom: 30px;
-    padding: 10px 0;
-    border-bottom: 2px solid #ecf0f1;
-}
-
-nav a {
-    color: #3498db;
-    text-decoration: none;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-nav span {
-    color: #2c3e50;
-}
-
-/* ==========================================
-   TÍTULOS
-   ========================================== */
+/* ===== TÍTULO PRINCIPAL ===== */
 h1 {
-    font-size: 38px;
-    color: #2c3e50;
-    margin-bottom: 20px;
-    line-height: 1.2;
-    border-left: 5px solid #3498db;
-    padding-left: 20px;
-}
-
-h2 {
-    font-size: 28px;
-    color: #2c3e50;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #ecf0f1;
-    padding-bottom: 10px;
-}
-
-h3 {
-    font-size: 22px;
-    color: #34495e;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-/* ==========================================
-   PÁRRAFOS
-   ========================================== */
-p {
-    font-size: 16px;
-    margin-bottom: 20px;
-    color: #34495e;
-}
-
-p.intro {
-    font-size: 19px;
-    font-weight: 500;
-    color: #2c3e50;
-    background-color: #eaf2f8;
-    padding: 20px 25px;
-    border-radius: 8px;
-    border-left: 5px solid #3498db;
-}
-
-p.cierre {
-    font-size: 17px;
-    font-style: italic;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #405FFA;              /* Electric Sapphire */
     text-align: center;
-    color: #7f8c8d;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 2px solid #ecf0f1;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #09BBCB;  /* Strong Cyan */
+    padding-bottom: 0.4rem;
 }
 
-/* ==========================================
-   LISTAS
-   ========================================== */
+/* ===== INTRODUCCIÓN ===== */
+p.intro {
+    font-size: 1.15rem;
+    color: #3B3664;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 1.2rem 1.8rem;
+    border-radius: 1rem;
+    border-left: 6px solid #405FFA;
+    margin-bottom: 2rem;
+}
+
+/* ===== SUBTÍTULOS H2 ===== */
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #405FFA;              /* Electric Sapphire */
+    margin-top: 2.5rem;
+    margin-bottom: 0.8rem;
+    border-bottom: 2px solid #09BBCB;
+    padding-bottom: 0.2rem;
+}
+
+/* ===== SUBTÍTULOS H3 ===== */
+h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #09BBCB;              /* Strong Cyan */
+    margin-top: 1.8rem;
+    margin-bottom: 0.4rem;
+}
+
+/* ===== LISTAS ===== */
 ul {
-    margin-bottom: 25px;
-    padding-left: 0;
     list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 1.5rem 0;
 }
 
-li {
-    margin-bottom: 15px;
-    padding: 15px 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    border-left: 4px solid #3498db;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
-    color: #34495e;
+ul li {
+    color: #3B3664;
+    padding: 0.4rem 0 0.4rem 2rem;
+    position: relative;
     line-height: 1.6;
 }
 
-li:hover {
-    background-color: #f0f7fc;
-    transform: translateX(5px);
-    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.15);
+/* Viñeta circular en Strong Cyan */
+ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.8rem;
+    width: 10px;
+    height: 10px;
+    background: #09BBCB;
+    border-radius: 50%;
+    transform: translateY(-2px);
 }
 
-li strong {
-    color: #2980b9;
-    display: inline-block;
-    margin-right: 5px;
+ul li strong {
+    color: #07240F;              /* Evergreen */
+    font-weight: 700;
 }
 
-/* ==========================================
-   LISTAS ANIDADAS (dentro de secciones)
-   ========================================== */
-h2 + ul li {
-    border-left-color: #2ecc71;
-}
-
-h3 + ul li {
-    border-left-color: #e67e22;
-}
-
-h3 + ul li strong {
-    color: #e67e22;
-}
-
-/* ==========================================
-   RESPONSIVE
-   ========================================== */
-@media (max-width: 768px) {
-    body {
-        margin: 20px 10px;
-        padding: 0 10px;
-    }
-    
-    h1 {
-        font-size: 28px;
-        padding-left: 15px;
-    }
-    
-    h2 {
-        font-size: 24px;
-    }
-    
-    h3 {
-        font-size: 20px;
-    }
-    
-    p.intro {
-        font-size: 17px;
-        padding: 15px;
-    }
-    
-    li {
-        padding: 12px 15px;
-    }
-}/* ==========================================
-   ESTILOS GENERALES
-   ========================================== */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-    line-height: 1.8;
-    color: #2c3e50;
-    background-color: #f8f9fa;
-}
-
-/* ==========================================
-   NAVEGACIÓN (MIGAS DE PAN)
-   ========================================== */
-nav {
-    font-size: 14px;
-    color: #7f8c8d;
-    margin-bottom: 30px;
-    padding: 10px 0;
-    border-bottom: 2px solid #ecf0f1;
-}
-
-nav a {
-    color: #3498db;
-    text-decoration: none;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-nav span {
-    color: #2c3e50;
-}
-
-/* ==========================================
-   TÍTULOS
-   ========================================== */
-h1 {
-    font-size: 38px;
-    color: #2c3e50;
-    margin-bottom: 20px;
-    line-height: 1.2;
-    border-left: 5px solid #3498db;
-    padding-left: 20px;
-}
-
-h2 {
-    font-size: 28px;
-    color: #2c3e50;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #ecf0f1;
-    padding-bottom: 10px;
-}
-
-h3 {
-    font-size: 22px;
-    color: #34495e;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-/* ==========================================
-   PÁRRAFOS
-   ========================================== */
-p {
-    font-size: 16px;
-    margin-bottom: 20px;
-    color: #34495e;
-}
-
-p.intro {
-    font-size: 19px;
-    font-weight: 500;
-    color: #2c3e50;
-    background-color: #eaf2f8;
-    padding: 20px 25px;
-    border-radius: 8px;
-    border-left: 5px solid #3498db;
-}
-
+/* ===== CIERRE ===== */
 p.cierre {
-    font-size: 17px;
-    font-style: italic;
+    margin-top: 2.5rem;
+    padding: 1rem 1.5rem;
+    background: rgba(64, 95, 250, 0.06);
+    border-radius: 1rem;
+    border: 1px solid rgba(9, 187, 203, 0.2);
+    color: #3B3664;
     text-align: center;
-    color: #7f8c8d;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 2px solid #ecf0f1;
+    font-style: italic;
 }
 
-/* ==========================================
-   LISTAS
-   ========================================== */
-ul {
-    margin-bottom: 25px;
-    padding-left: 0;
-    list-style: none;
-}
-
-li {
-    margin-bottom: 15px;
-    padding: 15px 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    border-left: 4px solid #3498db;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
-    color: #34495e;
-    line-height: 1.6;
-}
-
-li:hover {
-    background-color: #f0f7fc;
-    transform: translateX(5px);
-    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.15);
-}
-
-li strong {
-    color: #2980b9;
-    display: inline-block;
-    margin-right: 5px;
-}
-
-/* ==========================================
-   LISTAS ANIDADAS (dentro de secciones)
-   ========================================== */
-h2 + ul li {
-    border-left-color: #2ecc71;
-}
-
-h3 + ul li {
-    border-left-color: #e67e22;
-}
-
-h3 + ul li strong {
-    color: #e67e22;
-}
-
-/* ==========================================
-   RESPONSIVE
-   ========================================== */
-@media (max-width: 768px) {
-    body {
-        margin: 20px 10px;
-        padding: 0 10px;
-    }
-    
-    h1 {
-        font-size: 28px;
-        padding-left: 15px;
-    }
-    
-    h2 {
-        font-size: 24px;
-    }
-    
-    h3 {
-        font-size: 20px;
-    }
-    
-    p.intro {
-        font-size: 17px;
-        padding: 15px;
-    }
-    
-    li {
-        padding: 12px 15px;
-    }
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.4rem; }
+    h3 { font-size: 1.1rem; }
+    p.intro { font-size: 1rem; padding: 1rem; }
+    ul li { padding-left: 1.6rem; }
+    ul li::before { width: 8px; height: 8px; top: 0.7rem; }
 }
