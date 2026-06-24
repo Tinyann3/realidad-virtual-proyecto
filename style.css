@@ -6,8 +6,9 @@
 
 body {
     font-family: Arial, sans-serif;
+    font-weight: 400px; 
     line-height: 1.6;
-    padding: 20px;
+    padding: 10px;
     background-color: #f4f4f4;
 }
 
@@ -31,4 +32,28 @@ footer {
     padding: 10px;
     background-color: #333;
     color: white;
+}
+
+.contenido {
+    max-width: 1400px;   /* El texto nunca será más ancho de 800px, aunque la pantalla sea gigante */
+    margin: 0 auto;          
+    padding: 20px;      /* Espacio interno */
+    text-align: left;
+}
+
+.contenido ul {
+    list-style-type: disc;   /* Pone los puntitos de la lista */
+    padding-left: 20px;     /* Espacio para los puntitos */
+    margin-top: 20px;
+}
+
+.contenido li {
+    margin-bottom: 20px;    /* Espacio entre cada ítem de la lista */
+    line-height: 1.6;
+}
+
+.contenido li strong {
+    display: block;     /* El titulo esta en su propia linea */
+    margin-bottom: 5px;
+    font-weight: bold;
 }
